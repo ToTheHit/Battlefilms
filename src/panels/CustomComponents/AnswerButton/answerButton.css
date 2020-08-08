@@ -1,0 +1,64 @@
+.AnswerButton {
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: block;
+  width: 100%;
+}
+.AnswerButton--disabled {
+  opacity: 0.5;
+}
+.AnswerButton--button {
+  background: var(--button_secondary_background);
+  min-height: 44px;
+  white-space: pre-line;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 10px;
+}
+.AnswerButton--button--correct {
+  background: #4bb34b !important;
+}
+.AnswerButton--button--correct p {
+  color: #FFFFFF !important;
+}
+.AnswerButton--button--wrong {
+  border: solid 1px red;
+}
+.AnswerButton--button--wrong p {
+  color: red !important;
+}
+.AnswerButton--button--pressed {
+  animation: AnswerPressed 0.1s forwards;
+}
+.AnswerButton--label {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--text_primary);
+  text-align: left;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  white-space: pre-line;
+}
+@keyframes AnswerPressed {
+  0% {
+    transform: translateY(0px);
+    background: var(--button_secondary_background);
+  }
+  100% {
+    transform: translateY(2px);
+    background: var(--input_border);
+  }
+}
+/*# sourceMappingURL=answerButton.css.map */

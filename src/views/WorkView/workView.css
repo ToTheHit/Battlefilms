@@ -1,0 +1,31 @@
+.WorkView {
+  overflow: hidden;
+}
+.WorkView .Panel__in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.WorkView #modal-Work--report .ModalCard__title {
+  font-family: var(--font-tt);
+  font-size: 21px;
+}
+.WorkView #modal-Work--report .ModalCard__actions {
+  margin-top: 12px;
+}
+.WorkView #modal-Work--report .FormLayout__row {
+  padding-bottom: 0;
+}
+.WorkView #modal-Work--report .FormLayout__row-top {
+  padding-left: 0;
+  padding-right: 0;
+}
+.WorkView #modal-Work--report .FormLayout__row .Textarea {
+  margin-left: 0;
+  margin-right: 0;
+}
+/*# sourceMappingURL=workView.css.map */

@@ -1,0 +1,8 @@
+.ScalableButton__content {
+  transition: all 0.08s linear;
+}
+.ScalableButton__content--pressed {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04), 0 0 2px 0 rgba(0, 0, 0, 0.04);
+}
+/*# sourceMappingURL=scalableButton.css.map */

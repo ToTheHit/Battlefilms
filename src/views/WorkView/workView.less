@@ -1,0 +1,34 @@
+.WorkView {
+  overflow: hidden;
+  .Panel__in {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #modal-Work {
+    &--report {
+      .ModalCard {
+        &__title {
+          font-family: var(--font-tt);
+          font-size: 21px;
+        }
+        &__actions {
+          margin-top: 12px;
+        }
+      }
+      .FormLayout {
+        &__row {
+          padding-bottom: 0;
+          &-top {
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .Textarea {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

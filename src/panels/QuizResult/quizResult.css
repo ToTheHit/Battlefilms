@@ -1,0 +1,88 @@
+.QuizResult {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.QuizResult--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3px;
+  text-align: center;
+}
+.QuizResult--rowContainer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.QuizResult--scoreRow {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.QuizResult--icon {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: inherit;
+  padding-right: 12px;
+}
+.QuizResult--buttonColumn {
+  margin-top: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.QuizResult--buttonColumn__title {
+  text-align: center;
+  line-height: normal;
+  white-space: pre-line;
+}
+.QuizResult--buttonColumn__card {
+  margin-top: 20px;
+}
+.QuizResult--buttonColumn__card--title {
+  text-align: center;
+}
+.QuizResult--buttonColumn__card--button {
+  margin-top: 20px;
+}
+.QuizResult--buttonColumn__card--awards {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--text_secondary);
+}
+.QuizResult--buttonColumn__description {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--text_secondary);
+}
+.QuizResult__stickerContainer {
+  position: absolute;
+  opacity: 0;
+  z-index: -5;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/*# sourceMappingURL=quizResult.css.map */

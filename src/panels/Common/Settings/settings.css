@@ -1,0 +1,11 @@
+.Settings .FormLayout__row-bottom {
+  padding-top: 0;
+}
+.Settings__delete {
+  color: var(--destructive);
+}
+.Settings__delete .Button__content {
+  font-size: 17px;
+  line-height: 1.29;
+  letter-spacing: -0.41px;
+}

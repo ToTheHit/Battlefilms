@@ -1,0 +1,32 @@
+.RejectedQuestion__card {
+  margin-top: 20px;
+  background-color: rgba(235, 66, 80, 0.05);
+}
+.RejectedQuestion__card-dark {
+  background-color: rgba(235, 66, 80, 0.15);
+}
+.RejectedQuestion__subhead {
+  color: #eb4250;
+  letter-spacing: -0.15px;
+}
+.RejectedQuestion__reason {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  letter-spacing: -0.24px;
+}
+.RejectedQuestion__description {
+  color: #71757a;
+  letter-spacing: -0.15px;
+}
+.RejectedQuestion__description-dark {
+  color: #db737c;
+}
+.RejectedQuestion__button {
+  height: 44px;
+  margin-top: 20px;
+}
+.RejectedQuestion__button-dark {
+  color: #c4c8cc;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+/*# sourceMappingURL=rejectedQuestion.css.map */

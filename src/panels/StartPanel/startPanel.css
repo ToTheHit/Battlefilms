@@ -1,0 +1,131 @@
+.StartPanel {
+  overflow: hidden;
+}
+.StartPanel .Gallery__bullets {
+  margin-bottom: 20px;
+}
+.StartPanel--iconGroup {
+  position: absolute;
+  top: -190px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.StartPanel--iconGroup__line {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.StartPanel--iconGroup__line:nth-child(2) {
+  margin: 20px 0;
+}
+.StartPanel--iconGroup__icon {
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  margin: 0 20px;
+}
+.StartPanel--content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -10px;
+  transition: opacity linear 500ms;
+}
+.StartPanel--content-hidden {
+  opacity: 0;
+}
+.StartPanel--title {
+  position: relative;
+  margin-top: -10px;
+}
+.StartPanel--text {
+  margin: 10px 0;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.33;
+  letter-spacing: -0.24px;
+  max-width: 265px;
+}
+.StartPanel--time {
+  position: relative;
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StartPanel--time_colon {
+  font-size: 52px;
+  margin-bottom: 7px;
+}
+.StartPanel--time_counter {
+  font-size: 52px;
+}
+.StartPanel--time::before {
+  content: '';
+  width: 183px;
+  height: 64px;
+  position: absolute;
+  border-top: 1px solid var(--separator_common);
+  border-bottom: 1px solid var(--separator_common);
+  top: -20px;
+}
+.StartPanel--time__buttonAllow {
+  margin-top: 15px;
+}
+.StartPanel--time__buttonReject {
+  margin-top: 18px;
+}
+.StartPanel input {
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  width: 140px;
+  height: 100%;
+}
+.StartPanel--image_logo {
+  height: 228px;
+  width: 318px;
+}
+.StartPanel--image_poll {
+  max-width: 355px;
+  max-height: 324px;
+  width: 100%;
+}
+.StartPanel--image_market {
+  max-width: 300px;
+  max-height: 335px;
+  width: 100%;
+}
+.StartPanel--button {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.StartPanel--button_inner {
+  margin: 0 24px;
+}
+.StartPanel--button-hidden {
+  opacity: 0;
+}
+@media (min-device-height: 580px) {
+  .StartPanel--button {
+    bottom: 72px;
+  }
+}
+@media (min-device-height: 740px) {
+  .StartPanel--button {
+    bottom: 100px;
+  }
+}
+/*# sourceMappingURL=startPanel.css.map */

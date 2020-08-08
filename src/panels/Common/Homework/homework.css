@@ -1,0 +1,26 @@
+.Homework__preview {
+  letter-spacing: -0.15px;
+  color: #71757a;
+}
+.Homework__preview--hidden {
+  visibility: hidden;
+  height: 0;
+}
+.Homework__answer {
+  margin-top: 10px;
+}
+.Homework__explanation {
+  margin-top: 10px;
+  color: #71757a;
+}
+.Homework__button {
+  margin-top: 12px;
+}
+.Homework__list {
+  padding-bottom: 20px;
+}
+.Homework__card--content-hidden {
+  visibility: hidden;
+  height: 0;
+}
+/*# sourceMappingURL=homework.css.map */

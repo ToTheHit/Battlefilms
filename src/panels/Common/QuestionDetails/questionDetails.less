@@ -1,0 +1,39 @@
+.QuestionDetails {
+  &__answersGroup {
+    margin-top: 20px;
+  }
+  &__answer {
+    margin-top: 10px;
+  }
+  &__explanation {
+    .Header {
+      &__content {
+        padding-bottom: 3px !important;
+      }
+    }
+  }
+  &__generalInfo {
+    &--card {
+      &-dark {
+        background: var(--content_tint_background);
+      }
+    }
+  }
+
+  .TabsItem {
+    &:first-child {
+      padding-left: 0;
+      &::after {
+        left: 0;
+        width: calc(100% - 16px);
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        right: 0;
+        width: calc(100% - 16px);
+      }
+    }
+  }
+}

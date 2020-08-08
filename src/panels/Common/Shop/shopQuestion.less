@@ -1,0 +1,54 @@
+.ShopQuestion {
+
+  .Group>:not(.Header):first-child {
+    margin-top: 0;
+  }
+
+  &--form {
+    .FormLayout__container {
+      .FormLayout__row {
+        padding-bottom: 0;
+        &:nth-child(1) {
+          padding-bottom: 5px;
+        }
+        &:nth-child(2) {
+          padding-bottom: 5px;
+        }
+        &:nth-child(3) {
+          padding-bottom: 8px;
+          //background: aqua;
+        }
+        &:nth-child(4) {
+          padding-bottom: 8px;
+        }
+        &:nth-child(4) {
+          padding-bottom: 8px;
+        }
+        &:nth-child(5) {
+          padding-bottom: 5px;
+        }
+        &:nth-child(6) {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &--placeholder {
+    .Placeholder__text {
+      color: var(--text_primary);
+    }
+    &__icon {
+      &-accepted {
+        color: var(--button_primary_background);
+      }
+      &-rejected {
+        color: var(--destructive);
+      }
+    }
+    &__button {
+      margin: 0 8px;
+
+    }
+  }
+}

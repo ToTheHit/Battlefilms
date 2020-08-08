@@ -1,0 +1,171 @@
+.Work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+  min-height: 1px;
+}
+.Work .ModalRoot__mask {
+  z-index: 2;
+}
+.Work .ModalRoot__viewport {
+  z-index: 3;
+}
+.Work--subTitle {
+  background: var(--background_content);
+}
+.Work--button {
+  margin-top: 10px;
+}
+.Work--question a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+.Work--question .Group__description {
+  padding-bottom: 5px;
+}
+.Work--question__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Work--question__author-name {
+  margin-left: 6px;
+}
+.Work--subTitle {
+  min-height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Work--subTitle .Cell__in {
+  padding-left: 0;
+}
+.Work--showArrowNext {
+  margin-right: 12px;
+}
+.Work--timer {
+  margin-right: 12px;
+  height: 56px;
+  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--button_bot_shadow);
+  border-radius: 50%;
+  position: relative;
+}
+.Work--timer__circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.Work--timer__gradient {
+  width: 50px;
+  height: 50px;
+  background: #3F8AE0;
+  border-radius: 50%;
+  z-index: 1;
+}
+.Work--timer__time {
+  z-index: 2;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: var(--background_content);
+}
+.Work .ModalCard__title {
+  white-space: pre-line;
+}
+.Work .Gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  overflow-y: auto;
+  overflow: visible;
+  min-height: 1px;
+}
+.Work .Gallery__viewport {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: visible;
+  min-height: 1px;
+}
+.Work .Gallery__slide {
+  height: auto;
+  overflow: visible;
+  min-height: 1px;
+}
+.Work .WorkGalleryPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 1px;
+  height: 100%;
+}
+.Work .WorkGalleryPanel--content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: visible;
+}
+/*# sourceMappingURL=work.css.map */

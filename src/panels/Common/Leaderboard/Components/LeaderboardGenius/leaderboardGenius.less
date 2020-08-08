@@ -1,0 +1,69 @@
+.LeaderboardGenius {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+
+  .Group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & > :not(.Header):first-child {
+      margin: 0;
+    }
+  }
+
+  .Tabs {
+    margin-top: 0 !important;
+    margin-left: -15px;
+    margin-right: -12px;
+  }
+
+
+  .Gallery {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow: visible;
+
+    &__viewport {
+      //height: auto;
+      flex-grow: 1;
+      overflow: visible;
+
+    }
+
+    &__slide {
+      height: auto;
+      //padding: 24px;
+      //margin: -12px;
+      //width: calc(100% - 24px);
+      overflow: visible;
+      padding-bottom: 30px;
+      min-height: 1px;
+    }
+  }
+  .GalleryDark {
+    .Card {
+      background: var(--content_tint_background);
+    }
+  }
+
+  .Header {
+    &__content {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &__placeholder {
+    background: var(--modal_card_background);
+    border-radius: 10px;
+    &-dark {
+      background: var(--content_tint_background);
+    }
+  }
+}
+
+

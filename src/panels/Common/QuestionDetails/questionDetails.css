@@ -1,0 +1,27 @@
+.QuestionDetails__answersGroup {
+  margin-top: 20px;
+}
+.QuestionDetails__answer {
+  margin-top: 10px;
+}
+.QuestionDetails__explanation .Header__content {
+  padding-bottom: 3px !important;
+}
+.QuestionDetails__generalInfo--card-dark {
+  background: var(--content_tint_background);
+}
+.QuestionDetails .TabsItem:first-child {
+  padding-left: 0;
+}
+.QuestionDetails .TabsItem:first-child::after {
+  left: 0;
+  width: calc(100% - 16px);
+}
+.QuestionDetails .TabsItem:last-child {
+  padding-right: 0;
+}
+.QuestionDetails .TabsItem:last-child::after {
+  right: 0;
+  width: calc(100% - 16px);
+}
+/*# sourceMappingURL=questionDetails.css.map */

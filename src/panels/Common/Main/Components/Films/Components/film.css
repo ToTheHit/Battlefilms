@@ -1,0 +1,15 @@
+.Film {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.Film__preview {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  margin-right: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Film__authorPhoto {
+  z-index: 0;
+}

@@ -1,0 +1,52 @@
+.LeaderboardCategories {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+
+  &__Category {
+
+    &--header {
+      display: flex;
+      align-items: center;
+      &-counter {
+        color: var(--text_secondary);
+        margin-left: 8px;
+        margin-top: 3px;
+      }
+    }
+    &--leader {
+      margin-bottom: 8px;
+      &_description {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .Group{
+    &__description {
+      padding: 0 12px
+    }
+    &>:not(.Header):first-child {
+      margin-top: 0;
+    }
+  }
+  .Separator {
+    margin-top: 19px;
+  }
+
+  &--icon {
+    height: 28px;
+    width: 28px;
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    margin-right: 11px;
+  }
+
+  .Header{
+    &__subtitle {
+      white-space: pre-line;
+    }
+  }
+}

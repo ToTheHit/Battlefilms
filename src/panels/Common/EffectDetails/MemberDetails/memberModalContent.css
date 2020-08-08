@@ -1,0 +1,6 @@
+.MemberModalContent .Cell:first-child {
+  padding-top: 6px;
+}
+.MemberModalContent .Footer {
+  padding-bottom: 24px;
+}

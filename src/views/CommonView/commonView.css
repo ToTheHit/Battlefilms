@@ -1,0 +1,26 @@
+.CommonView {
+  /*  &__panel {
+    .Panel__in {
+      min-height: 100%;
+    }
+  }*/
+}
+.CommonView__Epic-dark .Tabbar {
+  background: #1a1a1c;
+}
+#Leaderboard {
+  overflow: hidden;
+}
+#Leaderboard .Panel__in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#Leaderboard .Panel__in .PanelHeader {
+  z-index: 10;
+}
+/*# sourceMappingURL=commonView.css.map */

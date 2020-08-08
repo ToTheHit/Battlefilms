@@ -1,0 +1,36 @@
+.Shop--item {
+  margin-bottom: 12px;
+}
+.Shop--item .SimpleCell__main {
+  padding-left: 10px;
+}
+.Shop--icon {
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+}
+.Shop--iconOuter {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+.Shop .Snackbar {
+  padding-top: 10px;
+}
+.Shop .Header__subtitle {
+  white-space: pre-line;
+  font-size: 13px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=shop.css.map */

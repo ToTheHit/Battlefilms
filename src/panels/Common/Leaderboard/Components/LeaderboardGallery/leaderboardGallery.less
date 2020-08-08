@@ -1,0 +1,31 @@
+.LeaderboardGallery {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  &--content {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: visible;
+    padding: 12px 12px 24px 12px;
+    border-radius: 10px;
+    width: calc(100% - 24px);
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    .Card {
+      height: 100%;
+      &__in {
+        height: 100%;
+      }
+    }
+  }
+
+  &--card {
+    height: auto;
+  }
+
+  .Gallery__slide {
+    background: var(--modal_card_background);
+  }
+}

@@ -1,0 +1,40 @@
+.ShopQuestion .Group > :not(.Header):first-child {
+  margin-top: 0;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row {
+  padding-bottom: 0;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(1) {
+  padding-bottom: 5px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(2) {
+  padding-bottom: 5px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(3) {
+  padding-bottom: 8px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(4) {
+  padding-bottom: 8px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(4) {
+  padding-bottom: 8px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(5) {
+  padding-bottom: 5px;
+}
+.ShopQuestion--form .FormLayout__container .FormLayout__row:nth-child(6) {
+  padding-bottom: 5px;
+}
+.ShopQuestion--placeholder .Placeholder__text {
+  color: var(--text_primary);
+}
+.ShopQuestion--placeholder__icon-accepted {
+  color: var(--button_primary_background);
+}
+.ShopQuestion--placeholder__icon-rejected {
+  color: var(--destructive);
+}
+.ShopQuestion--placeholder__button {
+  margin: 0 8px;
+}
+/*# sourceMappingURL=shopQuestion.css.map */

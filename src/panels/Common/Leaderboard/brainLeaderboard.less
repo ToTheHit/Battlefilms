@@ -1,0 +1,38 @@
+.BrainLeaderboard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  height: 1px;
+
+  &__panelHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--icon {
+      margin-top: 2px;
+    }
+  }
+  &--icon {
+    color: var(--button_primary_background);
+    transition: transform linear 200ms;
+  }
+  a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &__leader--badge {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 2px solid var(--modal_card_background);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

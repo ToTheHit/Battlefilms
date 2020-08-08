@@ -1,0 +1,12 @@
+.Main .PanelHeader {
+  border-bottom-color: var(--background_content) !important;
+}
+.Main .PanelHeader__in {
+  border-bottom-color: var(--background_content) !important;
+}
+.Main .FixedLayout {
+  border-bottom-color: var(--background_content) !important;
+}
+.Main .FixedLayout__in {
+  border-bottom-color: var(--background_content) !important;
+}
