@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 import Icon24DismissDark from '@vkontakte/icons/dist/24/dismiss_dark';
+import Icon24Dismiss from '@vkontakte/icons/dist/24/dismiss';
+
 import {
   ANDROID,
   IOS,
@@ -31,21 +33,20 @@ const EffectDetailsHeaderWithAction = (props) => {
           {platform === IOS
           && (
             <PanelHeaderButton onClick={() => setIsActive(false)}>
-              <Icon24DismissDark />
+              <Icon24Dismiss />
             </PanelHeaderButton>
           )}
         </>
       )}
       right={(
-        <Button
-          mode="tertiary"
+        <PanelHeaderButton
           onClick={() => {
             action(!isEditMode);
             setIsEditMode(((prevState) => !prevState));
           }}
         >
-          {isEditMode ? actionTextEnd : actionTextInit}
-        </Button>
+          Изменить
+        </PanelHeaderButton>
       )}
     >
       {text}
@@ -53,6 +54,16 @@ const EffectDetailsHeaderWithAction = (props) => {
   );
 };
 
+
+/*<Button
+  mode="tertiary"
+  onClick={() => {
+    action(!isEditMode);
+    setIsEditMode(((prevState) => !prevState));
+  }}
+>
+  {isEditMode ? actionTextEnd : actionTextInit}
+</Button>*/
 EffectDetailsHeaderWithAction.propTypes = {
   setIsActive: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,

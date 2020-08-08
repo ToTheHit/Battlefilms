@@ -42,8 +42,7 @@ export function userInfo(state = {
   last_name: '',
   photo_100: '',
   isInvited: false,
-  inviteHash: '',
-
+  participantBattleID: '',
 
   GP: {
     today: 0,
@@ -99,6 +98,7 @@ export function myBattle(state = {
   myFilms: [],
   members: [],
   settings: {
+    name: '[Название]',
     limit: 3,
     type: 0,
     numberOfWinners: 1,

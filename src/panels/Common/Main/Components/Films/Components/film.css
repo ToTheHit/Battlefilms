@@ -1,7 +1,3 @@
-.Film {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
 .Film__preview {
   width: 72px;
   height: 72px;
@@ -12,4 +8,18 @@
 }
 .Film__authorPhoto {
   z-index: 0;
+}
+.Film .Cell__before-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Film .Tappable {
+  padding: 6px 12px;
 }

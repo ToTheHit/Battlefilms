@@ -27,10 +27,12 @@ import History from '../../panels/Common/History/History';
 
 const CommonView = (props) => {
   const { id, nextView } = props;
-  const [activeStory, setActiveStory] = useState(globalVariables.commonView.roots.main);
   const dispatch = useDispatch();
   const scheme = useSelector((state) => state.schemeChanger.scheme);
-  const { isInvited } = useSelector((state) => state.userInfo);
+  const { isInvited, participantBattleID } = useSelector((state) => state.userInfo);
+  const [activeStory, setActiveStory] = useState(participantBattleID ? globalVariables.commonView.roots.history : globalVariables.commonView.roots.main);
+
+
 
   // Main activity
   const [mainActivePanel, setMainActivePanel] = useState('Main');
@@ -50,7 +52,7 @@ const CommonView = (props) => {
   }, [mainActivePanel]);
 
   // History activity
-  const [historyActivePanel, setHistoryActivePanel] = useState(globalVariables.commonView.panels.history);
+  const [historyActivePanel, setHistoryActivePanel] = useState(participantBattleID ? globalVariables.commonView.panels.battleParticipant : globalVariables.commonView.panels.history);
   const [historyPopoutView, setHistoryPopoutView] = useState(false);
   const [historyStoryHistory, setHistoryStoryHistory] = useState([globalVariables.commonView.panels.history]);
 
@@ -62,10 +64,16 @@ const CommonView = (props) => {
         scrollableElement: activeStory,
       },
     });
+    dispatch({
+      type: 'UPDATE_USER_INFO',
+      payload: {
+        // participantBattleID: '',
+        isInvited: false,
+      },
+    });
     if (e.currentTarget.dataset.story !== activeStory) {
       window.scroll({ top: 0, left: 0 });
     }
-
     setActiveStory(e.currentTarget.dataset.story);
   }
 
@@ -83,14 +91,14 @@ const CommonView = (props) => {
   };
 
   useEffect(() => {
-    if (isInvited) {
+    if (isInvited || participantBattleID) {
       setActiveStory(globalVariables.commonView.roots.history);
       setHistoryActivePanel(globalVariables.commonView.panels.battleParticipant);
       setMainActivePanel(globalVariables.commonView.panels.main);
     } else {
       setHistoryActivePanel(globalVariables.commonView.panels.history);
     }
-  }, [isInvited]);
+  }, [isInvited, participantBattleID]);
 
   return (
     <Epic
@@ -106,14 +114,6 @@ const CommonView = (props) => {
             text="Битва"
           >
             <Icon24Flash height={28} width={28} />
-          </TabbarItem>
-          <TabbarItem
-            onClick={changeStory}
-            selected={activeStory === globalVariables.commonView.roots.homework}
-            data-story={globalVariables.commonView.roots.homework}
-            text="Случайный фильм"
-          >
-            <Icon28KeyboardBotsOutline height={28} width={28} />
           </TabbarItem>
           <TabbarItem
             onClick={changeStory}
@@ -167,9 +167,10 @@ const CommonView = (props) => {
       </Root>
       <Root id={globalVariables.commonView.roots.history} activeView="HistoryView">
         <View
-          id={'HistoryView'}
+          id="HistoryView"
           activePanel={historyActivePanel}
           popout={(historyPopoutView && (<ScreenSpinner />))}
+          modal={<EffectDetailsSelector />}
         >
           <History
             id={globalVariables.commonView.panels.history}

@@ -165,6 +165,7 @@ const Main = (props) => {
             ],
             members: [],
             settings: {
+              name: '[Опа чирик]',
               limit: 3,
               type: 0,
               numberOfWinners: 1,
@@ -624,6 +625,13 @@ const Main = (props) => {
     dispatch({
       type: 'CLEAR_QUIZ_RESULT',
     });
+    dispatch({
+      type: 'UPDATE_USER_INFO',
+      payload: {
+        // participantBattleID: '',
+        isInvited: false,
+      },
+    });
 
     bridge.subscribe(bridgeOnRestore);
     window.addEventListener('focus', onRestore);
@@ -640,10 +648,6 @@ const Main = (props) => {
     };
   }, []);
 
-  useEffect(() => {
-
-  }, []);
-
   return (
     <Panel id={id} className="Main" style={{ opacity: (popoutMainView ? '0' : '1') }}>
       <PanelHeader
@@ -656,11 +660,12 @@ const Main = (props) => {
         isFetching={updatingView}
       >
         <SimpleCell
+          style={{ paddingTop: '6px', paddingBottom: '6px' }}
           disabled
           before={<Avatar size={48} src={userInfo.photo_100} />}
           description={`${userInfo.first_name} ${userInfo.last_name}`}
         >
-          {`[Название]`}
+          {myBattle.settings.name}
         </SimpleCell>
         <Separator />
         <Actions

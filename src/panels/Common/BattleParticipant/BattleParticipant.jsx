@@ -19,8 +19,9 @@ const BattleParticipant = (props) => {
   const {
     id, setActivePanel, setActiveStory, popoutHistoryView, setPopoutHistoryView, nextView,
   } = props;
-  const { isInvited, inviteHash } = useSelector((state) => state.userInfo);
+  const { isInvited, participantBattleID } = useSelector((state) => state.userInfo);
   const myBattle = useSelector((state) => state.myBattle);
+  const scrollListener = useSelector((state) => state.scrollTo);
 
   const [updatingData, setUpdatingData] = useState(false);
   const [settings, setSettings] = useState({
@@ -28,16 +29,40 @@ const BattleParticipant = (props) => {
     type: 0,
     numberOfWinners: 1,
     allowDuplicates: false,
-  })
+  });
+
   useEffect(() => {
-    setTimeout(() => {
+/*    setTimeout(() => {
       setPopoutHistoryView(false);
-    }, 2000);
+    }, 2000);*/
+
+    dispatch({
+      type: 'UPDATE_USER_INFO',
+      payload: {
+        participantBattleID: 'testInside',
+      },
+    });
   }, []);
 
-  function updateData() {
+  useEffect(() => {
+    if (scrollListener.scrollableElement === globalVariables.commonView.roots.history) {
+      // scroll.top(document.body, 0);
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [scrollListener]);
 
+
+
+  function updateData() {
+    setTimeout(() => {
+      setUpdatingData(false);
+    }, 1000);
   }
+  useEffect(() => {
+    if (updatingData) {
+      updateData();
+    }
+  }, [updatingData]);
 
   function onBack() {
     if (isInvited) {
@@ -46,7 +71,7 @@ const BattleParticipant = (props) => {
         type: 'UPDATE_USER_INFO',
         payload: {
           isInvited: false,
-          inviteHash: '',
+          participantBattleID: '',
         },
       });
     } else {
@@ -72,14 +97,15 @@ const BattleParticipant = (props) => {
       </PanelHeader>
       <PullToRefresh
         onRefresh={() => setUpdatingData(true)}
-        isFetching={updateData}
+        isFetching={updatingData}
       >
         <SimpleCell
+          style={{ paddingTop: '6px', paddingBottom: '6px' }}
           disabled
           before={<Avatar size={48} src="" />}
-          description="Организатор"
+          description="Имя Фамилия"
         >
-          {`${'Имя'} ${'Фамилия'}`}
+          {`${myBattle.settings.name}`}
         </SimpleCell>
         <Separator />
         <Actions
@@ -90,8 +116,8 @@ const BattleParticipant = (props) => {
 
         <Films
           nextView={nextView}
-          allFilms={myBattle.allFilms}
-          myFilms={myBattle.myFilms}
+          allFilms={[]}
+          myFilms={[]}
           isOwner={false}
           settings={myBattle.settings}
         />

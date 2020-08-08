@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 import Icon24DismissDark from '@vkontakte/icons/dist/24/dismiss_dark';
+import Icon24Dismiss from '@vkontakte/icons/dist/24/dismiss';
 import {
   ANDROID,
   IOS,
@@ -31,7 +32,7 @@ const EffectDetailsHeader = (props) => {
           {platform === IOS
           && (
             <PanelHeaderButton onClick={() => setIsActive(false)}>
-              <Icon24DismissDark />
+              <Icon24Dismiss />
             </PanelHeaderButton>
           )}
         </>

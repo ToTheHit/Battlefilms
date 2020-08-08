@@ -1,21 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './history.css';
-import { Button, Panel, PanelHeader } from '@vkontakte/vkui';
+import { Button, Panel, PanelHeader, Separator, Tabs, TabsItem } from '@vkontakte/vkui';
 import globalVariables from "../../../GlobalVariables";
+import MyBattles from "./Components/MyBattles/MyBattles";
+import MyFilms from "./Components/MyFilms/MyFilms";
 
 const History = (props) => {
   const { id, setActivePanel, popoutHistoryView, setPopoutHistoryView } = props;
+  const [selectedTab, setSelectedTab] = useState('Battles');
   return (
     <Panel id={id} className="History">
-      <PanelHeader>
+      <PanelHeader
+        separator={false}
+      >
         История
       </PanelHeader>
-      <Button
-        onClick={() => setActivePanel(globalVariables.commonView.panels.battleParticipant)}
-      >
-        To battle
-      </Button>
+      <Tabs>
+        <TabsItem
+          onClick={() => setSelectedTab('Battles')}
+          selected={selectedTab === 'Battles'}
+        >
+          Битвы
+        </TabsItem>
+        <TabsItem
+          onClick={() => setSelectedTab('Films')}
+          selected={selectedTab === 'Films'}
+        >
+          Фильмы
+        </TabsItem>
+      </Tabs>
+      <Separator />
+      {(selectedTab === 'Battles' && <MyBattles setActivePanel={setActivePanel}/>)}
+      {(selectedTab === 'Films' && <MyFilms />)}
+
     </Panel>
   );
 };

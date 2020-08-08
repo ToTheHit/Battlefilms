@@ -5,7 +5,7 @@ import {
   Button,
   Caption,
   Checkbox,
-  FormLayout, Panel, PanelHeader, PanelHeaderBack, Select,
+  FormLayout, Input, Panel, PanelHeader, PanelHeaderBack, Select,
 } from '@vkontakte/vkui';
 import globalVariables from '../../../GlobalVariables';
 
@@ -27,6 +27,8 @@ const Settings = (props) => {
         Настройки битвы
       </PanelHeader>
       <FormLayout>
+        <Input type="text" top="Название" />
+
         <Select top="Ограничение по фильмам">
           <option value={1}>1 фильм / человек</option>
           <option value={2}>2 фильма / человек</option>
@@ -37,8 +39,7 @@ const Settings = (props) => {
 
         <Select top="Тип битвы">
           <option value={1}>Обычная</option>
-          <option value={2}>Необычная</option>
-          <option value={3}>Особенная</option>
+          <option value={2}>Быстрая</option>
         </Select>
 
         <Select top="Количество победителей">
@@ -63,7 +64,7 @@ const Settings = (props) => {
           Разрешить повторения
         </Checkbox>
       </FormLayout>
-      <Button className="Settings__delete" mode="tertiary">Удалить эту битву</Button>
+      <Button className="Settings__delete" mode="tertiary">Очистить битву</Button>
     </Panel>
   );
 };

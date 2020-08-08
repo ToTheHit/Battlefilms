@@ -2,20 +2,30 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './addFilm.css';
 import {
-  Button, classNames, FixedLayout, Footer, Panel, PanelHeader, PanelSpinner, Placeholder, Search,
+  Button,
+  classNames,
+  FixedLayout,
+  Footer,
+  Panel,
+  PanelHeader,
+  PanelHeaderButton,
+  PanelSpinner,
+  Placeholder,
+  Search,
 } from '@vkontakte/vkui';
 import Icon56VideoOutline from '@vkontakte/icons/dist/56/video_outline';
 import Icon56ErrorOutline from '@vkontakte/icons/dist/56/error_outline';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import globalVariables from '../../GlobalVariables';
 import useDebounce from '../../useDebounce';
 import Film from '../Common/Main/Components/Films/Components/Film';
 
 const AddFilm = (props) => {
   const {
-    id, nextView, setAddFilmPopoutView
+    id, nextView, setAddFilmPopoutView,
   } = props;
+  // const isInvited = useSelector((state) => state.userInfo.isInvited);
   const dispatch = useDispatch();
   const AxiosCancelToken = axios.CancelToken;
   const source = AxiosCancelToken.source();
@@ -37,11 +47,11 @@ const AddFilm = (props) => {
       pid: '12321',
     };
 
-/*    axios.post(`${globalVariables.serverURL}/movie`, data)
+    /*    axios.post(`${globalVariables.serverURL}/movie`, data)
       .then((serverResponse) => {
         console.info(serverResponse);
       })
-      .catch((error) => console.info(error));*/
+      .catch((error) => console.info(error)); */
     dispatch({
       type: 'UPDATE_MAIN_SNACKBAR',
       payload: {
@@ -124,12 +134,11 @@ const AddFilm = (props) => {
       <PanelHeader
         className="AddFilm__header"
         left={(
-          <Button
-            mode="tertiary"
+          <PanelHeaderButton
             onClick={() => nextView(globalVariables.view.main)}
           >
             Закрыть
-          </Button>
+          </PanelHeaderButton>
         )}
       >
         Новый фильм

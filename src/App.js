@@ -98,7 +98,10 @@ const App = () => {
       <Root activeView={activeView}>
         <StartView id={globalVariables.view.start} nextView={setActiveView} />
         <CommonView id={globalVariables.view.main} nextView={setActiveView} />
-        <AddFilmView id={globalVariables.view.addFilm} nextView={setActiveView} />
+        <AddFilmView
+          id={globalVariables.view.addFilm}
+          nextView={setActiveView}
+        />
         <ConnectionLost id={globalVariables.view.connectionLost} nextView={setActiveView} />
 
         <TestView id={globalVariables.view.test} />

@@ -32,5 +32,5 @@
   letter-spacing: -0.08px;
 }
 .Actions__notifications {
-  color: var(--tabbar_active_icon);
+  color: var(--writebar_icon);
 }

@@ -58,14 +58,14 @@ const Actions = (props) => {
         text="Поделиться"
         onClick={share}
       >
-        <Icon28ShareOutline height={28} width={28} />
+        <Icon28ShareOutline style={{ color: 'var(--content_placeholder_text)' }} height={28} width={28} />
       </TabbarItem>
       <TabbarItem
         className="Actions__item"
         text="Участники"
         onClick={() => openModal('Members')}
       >
-        <Icon28UsersOutline height={28} width={28} />
+        <Icon28UsersOutline style={{ color: 'var(--content_placeholder_text)' }} height={28} width={28} />
       </TabbarItem>
       {isOwner && (
         <TabbarItem
@@ -73,7 +73,7 @@ const Actions = (props) => {
           text="Настройки"
           onClick={() => setActivePanel(globalVariables.commonView.panels.settings)}
         >
-          <Icon28SettingsOutline height={28} width={28} />
+          <Icon28SettingsOutline style={{ color: 'var(--content_placeholder_text)' }} height={28} width={28} />
         </TabbarItem>
       )}
       {!isOwner && (
@@ -82,7 +82,13 @@ const Actions = (props) => {
           text="Уведомления"
           onClick={() => updateNotificationsStatus(!notificationsAllow.isAllow)}
         >
-          <Icon28Notifications height={28} width={28} />
+          <Icon28Notifications
+            style={{
+              // color: (notificationsAllow.isAllow ? 'var(--writebar_icon)' : 'var(--content_placeholder_text)'),
+            }}
+            height={28}
+            width={28}
+          />
         </TabbarItem>
       )}
     </div>

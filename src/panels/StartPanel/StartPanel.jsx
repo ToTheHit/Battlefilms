@@ -31,7 +31,6 @@ const StartPanel = (props) => {
     bridge.send('VKWebAppStorageGet', { keys: [globalVariables.tooltips, globalVariables.introductionComplete] })
       .then(((bridgeData) => {
         const urlParams = new URLSearchParams(window.location.search);
-        console.info(window.location.search)
         const hash = window.location.hash.substr(1);
         if (bridgeData.keys[0].value) {
           dispatch({
@@ -41,12 +40,12 @@ const StartPanel = (props) => {
         }
 
         // TODO: убрать отрицание
-        if (bridgeData.keys[1].value) {
+        if (!bridgeData.keys[1].value) {
           dispatch({
             type: 'UPDATE_USER_INFO',
             payload: {
               isInvited: !!hash,
-              inviteHash: hash,
+              participantBattleID: hash,
             },
           });
           nextView(globalVariables.view.main);

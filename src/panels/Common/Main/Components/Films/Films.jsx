@@ -8,7 +8,8 @@ import {
   FixedLayout,
   Footer,
   Header,
-  Placeholder,
+  Link,
+  Placeholder, SelectMimicry, Separator,
 } from '@vkontakte/vkui';
 import Icon56VideoOutline from '@vkontakte/icons/dist/56/video_outline';
 import { useSelector } from 'react-redux';
@@ -16,7 +17,9 @@ import globalVariables from '../../../../../GlobalVariables';
 import Film from './Components/Film';
 
 const Films = (props) => {
-  const { nextView, myFilms, allFilms, isOwner, settings } = props;
+  const {
+    nextView, myFilms, allFilms, isOwner, settings,
+  } = props;
   // const myFilms = useSelector((state) => state.userInfo.myFilms);
   // const allFilms = useSelector((state) => state.userInfo.allFilms);
   const scheme = useSelector((state) => state.schemeChanger.scheme);
@@ -35,14 +38,12 @@ const Films = (props) => {
       temp.push(
         <Header
           key="AllFilmsHeader"
-          aside={(
-            <Button
-              mode="tertiary"
-              style={{ marginRight: '-16px' }}
+          aside={(isOwner &&
+            <Link
               onClick={() => setAllFilmsRemoval((prevState) => !prevState)}
             >
               {allFilmsRemoval ? 'Готово' : 'Изменить'}
-            </Button>
+            </Link>
           )}
         >
           Все фильмы
@@ -77,16 +78,17 @@ const Films = (props) => {
         icon={<Icon56VideoOutline />}
         header="Список фильмов"
         action={(
-          <Button
-            size="m"
-            onClick={() => nextView(globalVariables.view.addFilm)}
-          >
-            Добавить фильм
-          </Button>
+            <Button
+              size="m"
+              onClick={() => nextView(globalVariables.view.addFilm)}
+            >
+              Добавить фильм
+            </Button>
         )}
       >
-        Добавьте 3 любимых фильма и поделитесь битвой с друзьями.
-        Когда список фильмов станет больше – начните битву.
+        {isOwner && `Добавьте 3 любимых фильма и поделитесь битвой с друзьями.
+        Когда список фильмов станет больше – начните битву.`}
+        {!isOwner && `Добавьте 3 любимых фильма и дождитесь, когда организатор начнёт битву.`}
       </Placeholder>
     );
   }, [allFilms, allFilmsRemoval]);
@@ -98,13 +100,11 @@ const Films = (props) => {
         <Header
           key="MyFilmsHeader"
           aside={(
-            <Button
-              mode="tertiary"
-              style={{ marginRight: '-16px' }}
+            <Link
               onClick={() => setMyFilmsRemoval((prevState) => !prevState)}
             >
               {myFilmsRemoval ? 'Готово' : 'Изменить'}
-            </Button>
+            </Link>
           )}
         >
           Мои фильмы
@@ -151,6 +151,17 @@ const Films = (props) => {
               {`Добавить ещё ${settings.limit - myFilms.length} ${getCorrectWordFilms(settings.limit - myFilms.length)}`}
             </Button>
           </Div>,
+        );
+      } else {
+        temp.push(
+          <>
+            <Footer
+              key="Films__addFilm"
+            >
+              {`Достигнут лимит в ${settings.limit} ${getCorrectWordFilms(settings.limit)}`}
+            </Footer>
+            <Separator />
+          </>,
         );
       }
 
