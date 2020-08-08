@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.729b4f28.chunk.css",
+    "main.js": "/static/js/main.9627511c.chunk.js",
+    "main.js.map": "/static/js/main.9627511c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8a356cd9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8a356cd9.js.map",
+    "static/css/2.1e562f28.chunk.css": "/static/css/2.1e562f28.chunk.css",
+    "static/js/2.e272193d.chunk.js": "/static/js/2.e272193d.chunk.js",
+    "static/js/2.e272193d.chunk.js.map": "/static/js/2.e272193d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.af23adb14ce1934a0b07388c8f599dbe.js": "/precache-manifest.af23adb14ce1934a0b07388c8f599dbe.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.1e562f28.chunk.css.map": "/static/css/2.1e562f28.chunk.css.map",
+    "static/css/main.729b4f28.chunk.css.map": "/static/css/main.729b4f28.chunk.css.map",
+    "static/js/2.e272193d.chunk.js.LICENSE.txt": "/static/js/2.e272193d.chunk.js.LICENSE.txt",
+    "static/media/app.css": "/static/media/TTCommons-DemiBold.26512706.woff",
+    "static/media/intro-logo-dark.png": "/static/media/intro-logo-dark.71ed90b3.png",
+    "static/media/intro-logo-light.png": "/static/media/intro-logo-light.7d8b4497.png",
+    "static/media/intro-market-dark_new.png": "/static/media/intro-market-dark_new.e2716b68.png",
+    "static/media/intro-market-light_new.png": "/static/media/intro-market-light_new.4fb1fc62.png",
+    "static/media/intro-poll-dark.png": "/static/media/intro-poll-dark.b0356757.png",
+    "static/media/intro-poll-light.png": "/static/media/intro-poll-light.1709f6a3.png",
+    "static/media/opt_cherry-fail.png": "/static/media/opt_cherry-fail.20ad7a2a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a356cd9.js",
+    "static/css/2.1e562f28.chunk.css",
+    "static/js/2.e272193d.chunk.js",
+    "static/css/main.729b4f28.chunk.css",
+    "static/js/main.9627511c.chunk.js"
+  ]
+}
