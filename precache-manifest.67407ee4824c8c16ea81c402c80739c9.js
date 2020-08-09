@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da75cf1b594d6db1f4a05b7e5fb2e8c3",
+    "revision": "4ba4e0427857ef20beb6f65e2d44b9b6",
     "url": "/Battlefilms/index.html"
   },
   {
-    "revision": "dca32e93cbd5ad058950",
+    "revision": "f71654ad99977e626614",
     "url": "/Battlefilms/static/css/2.1e562f28.chunk.css"
   },
   {
-    "revision": "65e421be82f5b5c8b847",
-    "url": "/Battlefilms/static/css/main.5e460a38.chunk.css"
+    "revision": "c84f41f0ee2e097c87e2",
+    "url": "/Battlefilms/static/css/main.100a7fec.chunk.css"
   },
   {
-    "revision": "dca32e93cbd5ad058950",
-    "url": "/Battlefilms/static/js/2.14b5da6d.chunk.js"
+    "revision": "f71654ad99977e626614",
+    "url": "/Battlefilms/static/js/2.ed68eef7.chunk.js"
   },
   {
     "revision": "8cbce3d9d5df4ad58d7c3cdaa6fc70d2",
-    "url": "/Battlefilms/static/js/2.14b5da6d.chunk.js.LICENSE.txt"
+    "url": "/Battlefilms/static/js/2.ed68eef7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65e421be82f5b5c8b847",
-    "url": "/Battlefilms/static/js/main.6bd53f44.chunk.js"
+    "revision": "c84f41f0ee2e097c87e2",
+    "url": "/Battlefilms/static/js/main.b2a2a20a.chunk.js"
   },
   {
     "revision": "08eea36dcfad0f85dd03",

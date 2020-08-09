@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Battlefilms/static/css/main.5e460a38.chunk.css",
-    "main.js": "/Battlefilms/static/js/main.6bd53f44.chunk.js",
-    "main.js.map": "/Battlefilms/static/js/main.6bd53f44.chunk.js.map",
+    "main.css": "/Battlefilms/static/css/main.100a7fec.chunk.css",
+    "main.js": "/Battlefilms/static/js/main.b2a2a20a.chunk.js",
+    "main.js.map": "/Battlefilms/static/js/main.b2a2a20a.chunk.js.map",
     "runtime-main.js": "/Battlefilms/static/js/runtime-main.c9184682.js",
     "runtime-main.js.map": "/Battlefilms/static/js/runtime-main.c9184682.js.map",
     "static/css/2.1e562f28.chunk.css": "/Battlefilms/static/css/2.1e562f28.chunk.css",
-    "static/js/2.14b5da6d.chunk.js": "/Battlefilms/static/js/2.14b5da6d.chunk.js",
-    "static/js/2.14b5da6d.chunk.js.map": "/Battlefilms/static/js/2.14b5da6d.chunk.js.map",
+    "static/js/2.ed68eef7.chunk.js": "/Battlefilms/static/js/2.ed68eef7.chunk.js",
+    "static/js/2.ed68eef7.chunk.js.map": "/Battlefilms/static/js/2.ed68eef7.chunk.js.map",
     "index.html": "/Battlefilms/index.html",
-    "precache-manifest.d905e3687be168574d07b2908a0df98e.js": "/Battlefilms/precache-manifest.d905e3687be168574d07b2908a0df98e.js",
+    "precache-manifest.67407ee4824c8c16ea81c402c80739c9.js": "/Battlefilms/precache-manifest.67407ee4824c8c16ea81c402c80739c9.js",
     "service-worker.js": "/Battlefilms/service-worker.js",
     "static/css/2.1e562f28.chunk.css.map": "/Battlefilms/static/css/2.1e562f28.chunk.css.map",
-    "static/css/main.5e460a38.chunk.css.map": "/Battlefilms/static/css/main.5e460a38.chunk.css.map",
-    "static/js/2.14b5da6d.chunk.js.LICENSE.txt": "/Battlefilms/static/js/2.14b5da6d.chunk.js.LICENSE.txt",
+    "static/css/main.100a7fec.chunk.css.map": "/Battlefilms/static/css/main.100a7fec.chunk.css.map",
+    "static/js/2.ed68eef7.chunk.js.LICENSE.txt": "/Battlefilms/static/js/2.ed68eef7.chunk.js.LICENSE.txt",
     "static/media/app.css": "/Battlefilms/static/media/TTCommons-DemiBold.26512706.woff",
     "static/media/intro-logo-dark.png": "/Battlefilms/static/media/intro-logo-dark.71ed90b3.png",
     "static/media/intro-logo-light.png": "/Battlefilms/static/media/intro-logo-light.7d8b4497.png",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.c9184682.js",
     "static/css/2.1e562f28.chunk.css",
-    "static/js/2.14b5da6d.chunk.js",
-    "static/css/main.5e460a38.chunk.css",
-    "static/js/main.6bd53f44.chunk.js"
+    "static/js/2.ed68eef7.chunk.js",
+    "static/css/main.100a7fec.chunk.css",
+    "static/js/main.b2a2a20a.chunk.js"
   ]
 }
