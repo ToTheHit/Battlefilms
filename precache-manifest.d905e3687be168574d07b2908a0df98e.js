@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37477e7cedc16f216a140865de1630c1",
+    "revision": "da75cf1b594d6db1f4a05b7e5fb2e8c3",
     "url": "/Battlefilms/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Battlefilms/static/css/2.1e562f28.chunk.css"
   },
   {
-    "revision": "01a277f66845dad1ba8d",
+    "revision": "65e421be82f5b5c8b847",
     "url": "/Battlefilms/static/css/main.5e460a38.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Battlefilms/static/js/2.14b5da6d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "01a277f66845dad1ba8d",
-    "url": "/Battlefilms/static/js/main.9627511c.chunk.js"
+    "revision": "65e421be82f5b5c8b847",
+    "url": "/Battlefilms/static/js/main.6bd53f44.chunk.js"
   },
   {
     "revision": "08eea36dcfad0f85dd03",
